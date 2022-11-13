@@ -61,7 +61,7 @@ const showAlert = (type, msg) => {
 
 const login = async (email, password) => {
   try {
-    const res = await fetch('http://127.0.0.1:3000/api/v1/users/login', {
+    const res = await fetch('/api/v1/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ const login = async (email, password) => {
 
 const logout = async () => {
   try {
-    const res = await fetch('http://127.0.0.1:3000/api/v1/users/logout', {
+    const res = await fetch('/api/v1/users/logout', {
       method: 'GET',
       credentials: 'include',
     });
@@ -100,7 +100,7 @@ const logout = async () => {
 
 const signup = async (name, email, password, passwordConfirm) => {
   try {
-    const res = await fetch('http://127.0.0.1:3000/api/v1/users/signup', {
+    const res = await fetch('/api/v1/users/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -127,8 +127,8 @@ const updateSettings = async (body, type) => {
   try {
     const url =
       type === 'password'
-        ? 'http://127.0.0.1:3000/api/v1/users/updateMyPassword'
-        : 'http://127.0.0.1:3000/api/v1/users/updateMe';
+        ? '/api/v1/users/updateMyPassword'
+        : '/api/v1/users/updateMe';
     const options =
       type === 'password'
         ? {
@@ -159,9 +159,7 @@ const bookTour = async (tourId) => {
 
   try {
     // 1) Get checkout from API
-    const session = await fetch(
-      `http://127.0.0.1:3000/api/v1/bookings/checkout-session/${tourId}`
-    );
+    const session = await fetch(`/api/v1/bookings/checkout-session/${tourId}`);
 
     const data = await session.json();
 
