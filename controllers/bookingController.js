@@ -5,7 +5,6 @@ const Booking = require('../models/bookingModel');
 const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory');
 const { events } = require('../models/tourModel');
-const { response } = require('../app');
 
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 1) Get the currently booked tour
@@ -31,7 +30,11 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
           product_data: {
             name: `${tour.name} Tour`,
             description: tour.summary,
-            images: [`https://www.natours.dev/img/tours/${tour.imageCover}`],
+            images: [
+              `${req.protocol}://${req.get('host')}/img/tours/${
+                tour.imageCover
+              }`,
+            ],
           },
         },
       },
@@ -79,7 +82,7 @@ exports.webhookCheckout = (req, res, next) => {
   if (events.type === 'checkout.session.completed')
     createBookingCheckout(event.data.object);
 
-  response.status(200).json({ received: true });
+  res.status(200).json({ received: true });
 };
 
 exports.createBooking = factory.createOne(Booking);
