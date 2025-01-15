@@ -38,21 +38,61 @@ This project was developed as part of the [Node.js, Express, MongoDB & More: The
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/natours.git
-   cd natours
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up environment variables in a .env file:
-   ```env
-   NODE_ENV=development
-   PORT=3000
-   DATABASE=<Your MongoDB URI>
-   DATABASE_PASSWORD=<Your Password>
-   JWT_SECRET=<Your JWT Secret>
-   STRIPE_SECRET_KEY=<Your Stripe Key>
-   ```
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/natours.git
+    cd natours
+    ```
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Set up environment variables in a .env file:
+    ```env
+    NODE_ENV=development
+    PORT=3000
+    DATABASE=<Your MongoDB URI>
+    DATABASE_PASSWORD=<Your Password>
+    JWT_SECRET=<Your JWT Secret>
+    STRIPE_SECRET_KEY=<Your Stripe Key>
+    ```
+4.  Start the server:
+
+    - Development mode:
+
+    ```bash
+    npm run dev
+    ```
+
+    Production mode:
+
+    ```bash
+    npm run start:prod
+    ```
+
+---
+
+## Usage
+
+- Access the app locally at `http://localhost:3000`.
+- Explore tours, book experiences, and manage user accounts.
+
+---
+
+## Technologies Used
+
+- **Backend**: Node.js, Express, MongoDB (Mongoose)
+- **Frontend**: Pug templates, CSS
+- **Payment Integration**: Stripe
+- **Email**: Nodemailer with Pug templates
+- **Security**: Helmet, express-rate-limit, mongo-sanitize, xss-clean
+- **Dev Tools**: Prettier, ESLint, Nodemon, Parcel
+
+---
+
+## Scripts
+
+- `npm run dev`: Run the app in development mode.
+- `npm run start`: Start the app in production mode.
+- `npm run build:js`: Build frontend JavaScript files.
+- `npm run watch:js`: Watch for changes in frontend JS during development.
