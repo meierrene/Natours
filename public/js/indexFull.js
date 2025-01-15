@@ -102,9 +102,7 @@ const signup = async (name, email, password, passwordConfirm) => {
   try {
     const res = await fetch('/api/v1/users/signup', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
       body: JSON.stringify({ name, email, password, passwordConfirm }),
     });
