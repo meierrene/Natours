@@ -97,6 +97,6 @@ Natours is a robust full-stack application designed to help users explore and bo
 
 ---
 
-## 🙌 Credits
+## Credits
 
 This project was developed as part of the [Node.js, Express, MongoDB & More: The Complete Bootcamp](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/) by **Jonas Schmedtmann**.
