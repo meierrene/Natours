@@ -2,8 +2,6 @@
 
 Natours is a robust full-stack application designed to help users explore and book tours worldwide. Built using **Node.js**, **Express**, and **MongoDB**, it features a secure backend, dynamic Pug templates for server-side rendering, and advanced functionalities such as authentication, Stripe payment integration, and geo-spatial queries.
 
-This project was developed as part of the [Node.js, Express, MongoDB & More: The Complete Bootcamp](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/) by **Jonas Schmedtmann**.
-
 ## Features
 
 - **User Authentication**: Secure signup, login, password reset, and role-based access control using JWT.
@@ -96,3 +94,9 @@ This project was developed as part of the [Node.js, Express, MongoDB & More: The
 - `npm run start`: Start the app in production mode.
 - `npm run build:js`: Build frontend JavaScript files.
 - `npm run watch:js`: Watch for changes in frontend JS during development.
+
+---
+
+## 🙌 Credits
+
+This project was developed as part of the [Node.js, Express, MongoDB & More: The Complete Bootcamp](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/) by **Jonas Schmedtmann**.
