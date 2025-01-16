@@ -1,3 +1,4 @@
+![logo-green](https://github.com/user-attachments/assets/2b7430c6-728a-469e-af71-70c3f2ffb114)
 # Natours
 
 Natours is a robust full-stack application designed to help users explore and book tours worldwide. Built using **Node.js**, **Express**, and **MongoDB**, it features a secure backend, dynamic Pug templates for server-side rendering, and advanced functionalities such as authentication, Stripe payment integration, and geo-spatial queries.
