@@ -39,7 +39,7 @@ Natours is a robust full-stack application designed to help users explore and bo
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/natours.git
+    git clone https://github.com/meierrene/natours.git
     cd natours
     ```
 2.  Install dependencies:
